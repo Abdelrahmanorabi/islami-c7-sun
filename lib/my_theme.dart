@@ -6,6 +6,7 @@ class MyTheme {
   static const Color colorYellow = Color(0xFFFACC1D);
   static const String name = 'Ahmed';
   static final ThemeData lightTheme = ThemeData(
+
     backgroundColor: Colors.white,
     bottomSheetTheme: BottomSheetThemeData(
         backgroundColor: Colors.white,
@@ -22,9 +23,10 @@ class MyTheme {
     // }
     // ),
     textTheme: TextTheme(
-        headline6: TextStyle(fontSize: 18, color: Colors.black),
-        headline4: TextStyle(fontSize: 28, color: Colors.black),
-        subtitle2: TextStyle(fontSize: 14, color: Colors.black)),
+        headline6: TextStyle(fontSize: 18, color: Colors.black,fontFamily: 'ElMessiri'),
+        headline5: TextStyle(fontSize:25, color: Colors.black, fontFamily: 'ElMessiri'),
+        headline4: TextStyle(fontSize: 28, color: Colors.black,fontFamily: 'ElMessiri'),
+        subtitle2: TextStyle(fontSize: 14, color: Colors.black,fontFamily: 'ElMessiri')),
 
     scaffoldBackgroundColor: Colors.transparent,
     appBarTheme: const AppBarTheme(

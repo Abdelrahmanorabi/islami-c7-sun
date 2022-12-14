@@ -8,6 +8,7 @@ import 'package:islami_c7_sun/my_theme.dart';
 import 'package:islami_c7_sun/providers/settings_provider.dart';
 import 'package:islami_c7_sun/sura_details/sura_details.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   runApp(ChangeNotifierProvider(
@@ -15,10 +16,17 @@ void main() {
 }
 
 class MyApplication extends StatelessWidget {
+
+  late SettingsProvider settingsProvider;
+
+
+
   @override
   Widget build(BuildContext context) {
-    // get settings provider object
-    var settingsProvider = Provider.of<SettingsProvider>(context);
+
+    settingsProvider = Provider.of(context);
+    getValueFromSharedPreferences();
+
     return MaterialApp(
       localizationsDelegates: [
         AppLocalizations.delegate, // Add this line
@@ -40,4 +48,19 @@ class MyApplication extends StatelessWidget {
       initialRoute: HomeScreen.routeName,
     );
   }
+
+  void getValueFromSharedPreferences()async{
+
+    final preferences = await SharedPreferences.getInstance();
+    settingsProvider.changeLocale(preferences.getString('language')?? 'en');
+
+    if(preferences.getString('theme') == 'dark'){
+      settingsProvider.changeTheme(ThemeMode.dark);
+    }else if (preferences.getString('theme')=='light') {
+      settingsProvider.changeTheme(ThemeMode.light);
+
+    }
+  }
+
+
 }
