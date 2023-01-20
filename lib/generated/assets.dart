@@ -117,10 +117,6 @@ class Assets {
   static const String files98 = 'assets/files/98.txt';
   static const String files99 = 'assets/files/99.txt';
   static const String filesAhadeth = 'assets/files/ahadeth.txt';
-  static const String fontsDTHULUTH = 'assets/fonts/DTHULUTH.TTF';
-  static const String fontsElMessiriSemiBold = 'assets/fonts/ElMessiri-SemiBold.ttf';
-  static const String fontsJF Flat regular = 'assets/fonts/JF Flat regular.otf';
-  static const String fontsKOUFIBD = 'assets/fonts/KOUFIBD.TTF';
   static const String imagesHadethHeaderImage = 'assets/images/hadeth_header_image.png';
   static const String imagesIcHadeth = 'assets/images/ic_hadeth.png';
   static const String imagesIcQuran = 'assets/images/ic_quran.png';
@@ -129,9 +125,5 @@ class Assets {
   static const String imagesMainBackground = 'assets/images/main_background.png';
   static const String imagesMainBackgroundDark = 'assets/images/main_background_dark.png';
   static const String imagesQuranHeaderImage = 'assets/images/quran_header_image.png';
-  static const String imagesSebhaDarkBody = 'assets/images/sebha_dark_body.png';
-  static const String imagesSebhaDarkHead = 'assets/images/sebha_dark_head.png';
-  static const String imagesSebhaLightBody = 'assets/images/sebha_light_body.png';
-  static const String imagesSebhaLightHead = 'assets/images/sebha_light_head.png';
 
 }
